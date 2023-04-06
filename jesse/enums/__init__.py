@@ -56,6 +56,7 @@ class order_types:
 class exchanges:
     SANDBOX = 'Sandbox'
     COINBASE_SPOT = 'Coinbase Spot'
+    KUCOIN_SPOT = 'Kucoin Spot'
     BITFINEX_SPOT = 'Bitfinex Spot'
     BINANCE_SPOT = 'Binance Spot'
     BINANCE_US_SPOT = 'Binance US Spot'
