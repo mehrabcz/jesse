@@ -14,6 +14,17 @@ if jh.is_jesse_project():
 
     # create and expose ENV_VALUES
     ENV_VALUES = dotenv_values('.env')
+    
+    if os.environ.get('POSTGRES_HOST', None):
+        ENV_VALUES['POSTGRES_HOST'] = os.getenv('POSTGRES_HOST')
+        ENV_VALUES['POSTGRES_NAME'] = os.getenv('POSTGRES_NAME')
+        ENV_VALUES['POSTGRES_PORT'] = os.getenv('POSTGRES_PORT')
+        ENV_VALUES['POSTGRES_USERNAME'] = os.getenv('POSTGRES_USERNAME')
+        ENV_VALUES['POSTGRES_PASSWORD'] = os.getenv('POSTGRES_PASSWORD')
+        ENV_VALUES['REDIS_HOST'] = os.getenv('REDIS_HOST')
+        ENV_VALUES['REDIS_PORT'] = os.getenv('REDIS_PORT')
+        ENV_VALUES['REDIS_DB'] = 0
+
 
     if jh.is_unit_testing():
         ENV_VALUES['POSTGRES_HOST'] = '127.0.0.1'
