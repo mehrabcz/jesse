@@ -23,6 +23,7 @@ if jh.is_jesse_project():
         ENV_VALUES['POSTGRES_PASSWORD'] = os.getenv('POSTGRES_PASSWORD')
         ENV_VALUES['REDIS_HOST'] = os.getenv('REDIS_HOST')
         ENV_VALUES['REDIS_PORT'] = os.getenv('REDIS_PORT')
+        ENV_VALUES['PASSWORD'] = os.getenv('JESSE_PASSWORD', 'unset')
         ENV_VALUES['REDIS_DB'] = 0
 
 
