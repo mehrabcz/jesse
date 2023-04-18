@@ -874,6 +874,7 @@ def get_pid():
 
 
 def is_jesse_project():
+    return True
     ls = os.listdir('.')
     return 'strategies' in ls and 'storage' in ls
 

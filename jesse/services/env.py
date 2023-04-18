@@ -25,6 +25,7 @@ if jh.is_jesse_project():
         ENV_VALUES['REDIS_PORT'] = os.getenv('REDIS_PORT')
         ENV_VALUES['PASSWORD'] = os.getenv('JESSE_PASSWORD', 'unset')
         ENV_VALUES['REDIS_DB'] = 0
+        ENV_VALUES['REDIS_PASSWORD'] = ''
 
 
     if jh.is_unit_testing():
